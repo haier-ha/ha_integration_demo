@@ -36,9 +36,9 @@ _LOGGER = logging.getLogger(__name__)
 # Digital-model attribute name for 静眠. Boolean LIST ("true"/"false").
 ATTR_SILENT_SLEEP = "silentSleepStatus"
 
-# PIDs that support 静眠 (新增 PID 只改这里). Demo values — replace with the
-# real pids (形如 "PID_AACPBR000").
-PIDS_COMMON_SILENT_SLEEP: list[str] = ["PID_AABMZ0001", "PID_AAABTT00M", "PID_AABMZGU00"]
+# PIDs that support 静眠 (新增 PID 只改这里). 已按 dumps 里的数字模型核对：
+# PID_AACPBE000 (A177 星悦挂机) / PID_AB96AE000, PID_AB9611001 (A178 立式)。
+PIDS_COMMON_SILENT_SLEEP: list[str] = ["PID_AACPBE000", "PID_AB96AE000", "PID_AB9611001"]
 
 
 @HaierDeviceEntity.register(PIDS_COMMON_SILENT_SLEEP, "climate")
